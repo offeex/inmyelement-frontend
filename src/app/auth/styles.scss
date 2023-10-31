@@ -1,0 +1,91 @@
+@use "@/shared/ui/styles/colors";
+
+.bg {
+  position: absolute;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+
+  mask-image: url("/wave-haikei.svg"), linear-gradient(#000, #000);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  mask-position: clamp(-550px, 40%, 0px) 0;
+  mask-size: cover;
+
+  &.img {
+    $darkener: transparentize(colors.$background-rgb, .3);
+    background-image: linear-gradient($darkener, $darkener), url("/coding-bg.png");
+    background-position: right;
+    background-size: cover;
+  }
+
+  &.line {
+    background-color: transparentize(#11EE92, .25);
+    transform: translateX(-2px);
+  }
+}
+
+.nerd {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30vw;
+  height: auto;
+}
+
+main {
+  padding: 60px 0 60px 10vw;
+  width: min(60vw, 1100px);
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .heading {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .name {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg {
+    display: none;
+  }
+
+  .nerd {
+    display: none;
+  }
+
+  main {
+    padding: 60px 15vw;
+    width: unset;
+    align-items: center;
+
+    .login-container {
+      width: 100%;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-height: 1170px) and (min-width: 768px) {
+  .nerd {
+    display: none;
+  }
+}

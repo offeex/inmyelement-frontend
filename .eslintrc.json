@@ -1,0 +1,11 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "arrow-spacing": "error",
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "quote-props": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "react/no-unescaped-entities": 0
+  }
+}

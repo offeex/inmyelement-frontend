@@ -1,0 +1,29 @@
+@use "@/shared/ui/styles/colors";
+
+body {
+  color: colors.$text-rgb;
+  background: colors.$background-rgb;
+  font-size: 14px;
+
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}

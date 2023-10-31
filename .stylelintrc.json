@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "string-quotes": "double",
+    "no-extra-semicolons": true
+  }
+}
